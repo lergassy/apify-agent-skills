@@ -1,0 +1,26 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.lergassy/lazada",
+  "title": "Lazada (Apify)",
+  "description": "Lazada search, product pages, variants and reviews in ID, MY, SG, PH, TH, VN via Apify Actors",
+  "version": "1.0.0",
+  "websiteUrl": "https://apify.com/lergassy/lazada-scraper",
+  "repository": {
+    "url": "https://github.com/lergassy/apify-agent-skills",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.apify.com/?tools=lergassy/lazada-scraper,blueskyscraper/lazada-product-scraper",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Apify API token as 'Bearer <apify-api-token>' (Apify Console \u2192 Settings \u2192 API & Integrations). Runs are billed to your Apify account.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

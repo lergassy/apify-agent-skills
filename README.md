@@ -38,6 +38,19 @@ You need an Apify account and token (`APIFY_TOKEN`, or `apify login` with the [A
 
 Each skill folder has `SKILL.md` (when to use it, routing table, working inputs, row fields, troubleshooting) and `references/gotchas.md` (prices and cost traps).
 
+## MCP endpoints
+
+The same Actors as ready MCP servers (Streamable HTTP, header `Authorization: Bearer <APIFY_TOKEN>`), listed in the [official MCP Registry](https://registry.modelcontextprotocol.io) under `io.github.lergassy/*`. The `server.json` files are in [mcp/](mcp/).
+
+| Registry name | Endpoint |
+|---------------|----------|
+| `io.github.lergassy/flights-mcp-server` | `https://lergassy--flights-mcp-server.apify.actor/mcp` |
+| `io.github.lergassy/google-flights` | `https://mcp.apify.com/?tools=lergassy/google-flights-scraper,lergassy/flight-price-calendar,lergassy/kayak-flights-scraper` |
+| `io.github.lergassy/lazada` | `https://mcp.apify.com/?tools=lergassy/lazada-scraper,blueskyscraper/lazada-product-scraper` |
+| `io.github.lergassy/tiktok-shop` | `https://mcp.apify.com/?tools=lergassy/tiktok-shop-top-products-scraper,lergassy/tiktok-shop-videos-scraper,lergassy/tiktok-shop-creators-scraper,lergassy/tiktok-shop-shops-live-scraper,lergassy/tiktok-shop-reviews-scraper,apimy/tiktok-shop-search-scraper` |
+| `io.github.lergassy/threads` | `https://mcp.apify.com/?tools=lergassy/threads-scraper,lergassy/threads-search-scraper,lergassy/threads-profile-scraper` |
+| `io.github.lergassy/china-sourcing` | `https://mcp.apify.com/?tools=blueskyscraper/1688-products-scraper,blueskyscraper/1688-product-details-scraper,blueskyscraper/alibaba-products-scraper` |
+
 ## Disclosure
 
 The Actors these skills route to are paid (pay per result) and are built and maintained by the author of this repository. Links carry no affiliate parameters. Prices in the skills are Apify Store list prices on the date shown; the Store page of each Actor is the source of truth.

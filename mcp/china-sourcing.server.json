@@ -1,0 +1,26 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.lergassy/china-sourcing",
+  "title": "1688 & Alibaba Sourcing (Apify)",
+  "description": "1688 and Alibaba wholesale search: price tiers, MOQ, variants, suppliers (Apify Actors)",
+  "version": "1.0.0",
+  "websiteUrl": "https://apify.com/blueskyscraper/1688-product-details-scraper",
+  "repository": {
+    "url": "https://github.com/lergassy/apify-agent-skills",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.apify.com/?tools=blueskyscraper/1688-products-scraper,blueskyscraper/1688-product-details-scraper,blueskyscraper/alibaba-products-scraper",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Apify API token as 'Bearer <apify-api-token>' (Apify Console \u2192 Settings \u2192 API & Integrations). Runs are billed to your Apify account.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
