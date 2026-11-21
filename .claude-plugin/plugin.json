@@ -1,0 +1,10 @@
+{
+  "name": "apify-ecommerce-travel-data",
+  "version": "1.0.0",
+  "description": "Get e-commerce, social and travel data with Apify Actors: China sourcing (1688, Alibaba), TikTok Shop products, creators and reviews, Meta Threads posts and profiles, Google Flights and KAYAK fares, Lazada products. Each skill picks the right Actor, gives an input tested by a real run, and explains costs and common errors.",
+  "author": { "name": "lergassy", "url": "https://apify.com/lergassy" },
+  "homepage": "https://github.com/lergassy/apify-agent-skills",
+  "repository": "https://github.com/lergassy/apify-agent-skills",
+  "license": "MIT",
+  "keywords": ["apify", "web scraping", "1688", "alibaba", "tiktok shop", "threads", "google flights", "kayak", "lazada", "ecommerce data", "travel data"]
+}

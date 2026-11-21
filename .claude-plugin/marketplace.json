@@ -9,6 +9,19 @@
   },
   "plugins": [
     {
+      "name": "apify-ecommerce-travel-data",
+      "source": "./",
+      "description": "All five skills in one plugin: China sourcing (1688, Alibaba), TikTok Shop research, Meta Threads research, flight search (Google Flights, KAYAK) and Lazada products, through Apify Actors.",
+      "keywords": [
+        "apify",
+        "web scraping",
+        "ecommerce data",
+        "travel data",
+        "social media data"
+      ],
+      "category": "data-extraction"
+    },
+    {
       "name": "apify-china-sourcing",
       "source": "./skills/apify-china-sourcing",
       "skills": "./",

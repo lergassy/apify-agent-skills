@@ -18,7 +18,13 @@ One skill:
 npx skills add lergassy/apify-agent-skills --skill apify-flight-search
 ```
 
-Claude Code plugin marketplace:
+Claude Code plugin, all five skills in one step:
+
+```
+/plugin install apify-ecommerce-travel-data --marketplace lergassy/apify-agent-skills
+```
+
+Or add the marketplace and pick single skills:
 
 ```
 /plugin marketplace add lergassy/apify-agent-skills
