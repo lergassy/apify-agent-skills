@@ -24,12 +24,6 @@ Claude Code plugin, all five skills in one step:
 /plugin install apify-ecommerce-travel-data --marketplace lergassy/apify-agent-skills
 ```
 
-Or add the marketplace and pick single skills:
-
-```
-/plugin marketplace add lergassy/apify-agent-skills
-```
-
 You need an Apify account and token (`APIFY_TOKEN`, or `apify login` with the [Apify CLI](https://docs.apify.com/cli)). The same Actors work through the [Apify MCP server](https://mcp.apify.com).
 
 ## Skills
