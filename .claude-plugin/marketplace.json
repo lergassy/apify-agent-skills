@@ -4,126 +4,13 @@
     "name": "lergassy"
   },
   "metadata": {
-    "description": "Apify agent skills for China sourcing (1688, Alibaba), TikTok Shop, Meta Threads, flights (Google Flights, KAYAK) and Lazada",
-    "version": "1.0.0"
+    "description": "Apify agent skills for China sourcing (1688, Alibaba), TikTok Shop, Meta Threads, flights (Google Flights, KAYAK) and Lazada"
   },
   "plugins": [
     {
       "name": "apify-ecommerce-travel-data",
       "source": "./",
-      "description": "All five skills in one plugin: China sourcing (1688, Alibaba), TikTok Shop research, Meta Threads research, flight search (Google Flights, KAYAK) and Lazada products, through Apify Actors.",
-      "keywords": [
-        "apify",
-        "web scraping",
-        "ecommerce data",
-        "travel data",
-        "social media data"
-      ],
-      "category": "data-extraction"
-    },
-    {
-      "name": "apify-china-sourcing",
-      "source": "./skills/apify-china-sourcing",
-      "skills": "./",
-      "description": "This skill should be used when the user asks to \"find suppliers on 1688\", \"search 1688 for a product\", \"get the price tiers and MOQ for this 1688 link\", \"find Alibaba suppliers\", \"compare 1688 and Alibaba prices\", \"source a product from China\", \"find a factory for\", or wants wholesale prices, minimum order quantities, SKU variants or supplier details from 1688.com or Alibaba.com. It picks the right Apify Actor for search vs product page, builds a valid input, keeps the run cheap, and returns a comparison in USD with English titles. Do not use it for Taobao, Tmall, AliExpress or Amazon retail listings.",
-      "keywords": [
-        "1688",
-        "alibaba",
-        "china sourcing",
-        "wholesale prices",
-        "MOQ",
-        "price tiers",
-        "suppliers",
-        "factory",
-        "product sourcing",
-        "dropshipping sourcing",
-        "apify"
-      ],
-      "category": "data-extraction"
-    },
-    {
-      "name": "apify-flight-search",
-      "source": "./skills/apify-flight-search",
-      "skills": "./",
-      "description": "This skill should be used when the user asks to \"find flights from X to Y\", \"cheapest flight on a date\", \"Google Flights prices\", \"which day is cheapest to fly\", \"price calendar for a route\", \"where can I fly cheaply from X\", \"compare Google Flights and KAYAK\", \"monitor a fare\", or wants flight itineraries, fares, airlines, stops, durations, booking options or cheapest dates and destinations as data. It routes to the right Apify Actor (Google Flights search, date calendar, explore-anywhere, KAYAK fares per booking site), builds a valid input with IATA codes and future dates, and keeps the run cheap. Do not use it for hotels, car rental, train or bus tickets, or for booking a ticket.",
-      "keywords": [
-        "google flights",
-        "flight prices",
-        "cheap flights",
-        "airfare",
-        "flight search",
-        "price calendar",
-        "cheapest dates",
-        "explore destinations",
-        "kayak",
-        "momondo",
-        "travel data",
-        "apify"
-      ],
-      "category": "travel"
-    },
-    {
-      "name": "apify-lazada-products",
-      "source": "./skills/apify-lazada-products",
-      "skills": "./",
-      "description": "This skill should be used when the user asks to \"scrape Lazada\", \"search Lazada for a product\", \"Lazada prices in Malaysia / Indonesia / Thailand / Philippines / Vietnam / Singapore\", \"get details of this Lazada product link\", \"Lazada product reviews\", \"track Lazada competitor prices\", \"products of a Lazada shop\", or wants Southeast Asian marketplace data from Lazada — price, discount, sold count, rating, seller, variants, specifications or reviews. It picks the right Apify Actor for search vs product page vs reviews, builds a valid input with the right storefront and keeps the run cheap. Do not use it for Shopee, Tokopedia, Amazon or TikTok Shop, or for placing orders.",
-      "keywords": [
-        "lazada",
-        "lazada scraper",
-        "southeast asia ecommerce",
-        "malaysia",
-        "indonesia",
-        "thailand",
-        "philippines",
-        "vietnam",
-        "singapore",
-        "price monitoring",
-        "competitor prices",
-        "product reviews",
-        "marketplace data",
-        "apify"
-      ],
-      "category": "ecommerce"
-    },
-    {
-      "name": "apify-threads-research",
-      "source": "./skills/apify-threads-research",
-      "skills": "./",
-      "description": "This skill should be used when the user asks to \"scrape Threads\", \"get posts from a Threads account\", \"search Threads for a keyword or hashtag\", \"monitor brand mentions on Threads\", \"get replies under a Threads post\", \"find Threads accounts about a topic\", \"get follower counts / bio / emails of Threads profiles\", or wants Meta Threads posts, replies, engagement (likes, replies, reposts, views) or profile data as rows. It picks the right Apify Actor for accounts, keyword search, replies or profiles, builds a valid input, keeps the run cheap and works without a Threads login. Do not use it for Instagram, X/Twitter, Bluesky or Facebook.",
-      "keywords": [
-        "threads",
-        "meta threads",
-        "threads scraper",
-        "social listening",
-        "brand monitoring",
-        "hashtag",
-        "influencer research",
-        "threads profiles",
-        "engagement",
-        "apify"
-      ],
-      "category": "social-media"
-    },
-    {
-      "name": "apify-tiktok-shop-research",
-      "source": "./skills/apify-tiktok-shop-research",
-      "skills": "./",
-      "description": "This skill should be used when the user asks to \"find best-selling TikTok Shop products\", \"what sells on TikTok Shop\", \"TikTok Shop revenue / GMV / units sold\", \"find TikTok Shop affiliate creators\", \"which videos sell this product\", \"top TikTok Shop shops or live streams\", \"scrape TikTok Shop reviews\", \"search TikTok Shop for a product\", or wants product research, winning-product discovery, creator (affiliate) sourcing or competitor sales data for TikTok Shop in the US, UK, Southeast Asia, Japan, Mexico, Europe or Brazil. It routes to the right Apify Actor (top products, videos, creators, shops and lives, keyword search, reviews), builds a valid input and keeps the run cheap. Do not use it for ordinary TikTok videos without a shop link, for Amazon or Shopee, or for placing orders.",
-      "keywords": [
-        "tiktok shop",
-        "tiktok shop products",
-        "winning products",
-        "product research",
-        "gmv",
-        "units sold",
-        "tiktok shop creators",
-        "affiliates",
-        "tiktok shop videos",
-        "tiktok shop reviews",
-        "live commerce",
-        "apify"
-      ],
-      "category": "ecommerce"
+      "description": "All five skills in one plugin: China sourcing (1688, Alibaba), TikTok Shop research, Meta Threads research, flight search (Google Flights, KAYAK) and Lazada products, through Apify Actors."
     }
   ]
 }
