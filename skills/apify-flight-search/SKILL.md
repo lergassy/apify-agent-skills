@@ -1,11 +1,11 @@
 ---
 name: apify-flight-search
-description: This skill should be used when the user asks to "find flights from X to Y", "cheapest flight on a date", "Google Flights prices", "which day is cheapest to fly", "price calendar for a route", "where can I fly cheaply from X", "compare Google Flights and KAYAK", "monitor a fare", or wants flight itineraries, fares, airlines, stops, durations, booking options or cheapest dates and destinations as data. It routes to the right Apify Actor (Google Flights search, date calendar, explore-anywhere, KAYAK fares per booking site), builds a valid input with IATA codes and future dates, and keeps the run cheap. Do not use it for hotels, car rental, train or bus tickets, or for booking a ticket.
+description: This skill should be used when the user asks to "find flights from X to Y", "cheapest flight on a date", "Google Flights prices", "which day is cheapest to fly", "price calendar for a route", "where can I fly cheaply from X", "compare Google Flights and KAYAK", "Ryanair fares", "cheapest Ryanair day", "monitor a fare", or wants flight itineraries, fares, airlines, stops, durations, booking options or cheapest dates and destinations as data. It routes to the right Apify Actor (Google Flights search, date calendar, explore-anywhere, Ryanair fare calendar, KAYAK fares per booking site), builds a valid input with IATA codes and future dates, and keeps the run cheap. Do not use it for hotels, car rental, train or bus tickets, or for booking a ticket.
 license: MIT
 metadata:
-  version: "1.0"
+  version: "1.1"
   category: travel
-  keywords: "google flights, flight prices, cheap flights, airfare, flight search, price calendar, cheapest dates, explore destinations, kayak, momondo, travel data, apify"
+  keywords: "google flights, ryanair flights, flight prices, cheap flights, airfare, flight search, price calendar, cheapest dates, explore destinations, kayak, momondo, travel data, apify"
 ---
 
 # Flight search with Apify: Google Flights, cheapest dates and destinations, KAYAK
@@ -53,6 +53,7 @@ Out of scope (the boundary):
 |-----------|----------|------|----------|
 | Flights for a route and date; also price calendar, explore-anywhere, multi-city, several routes | `lergassy/google-flights-scraper` | community | Full Google Flights list (100–150 itineraries), price level vs typical, booking options, return flights |
 | Cheapest day only, many routes at once | `lergassy/flight-price-calendar` | community | Calendar preset of the same engine (`calendarOnly` on by default, 60 days) |
+| Ryanair only: cheapest fare per day over 1–12 months, cheapest destinations from a Ryanair base | `lergassy/ryanair-flights-scraper` | community | Ryanair's own fares with flight times, any currency, booking link per day; no run fee |
 | Fares per booking site (airline vs agencies) | `lergassy/kayak-flights-scraper` | community | KAYAK or Momondo, one row per provider with `allProviders: true` |
 | Flight tools inside an MCP client | `lergassy/flights-mcp-server` | community | Four tools (search, compare Google vs KAYAK, cheapest dates, cheapest destinations) at `https://lergassy--flights-mcp-server.apify.actor/mcp` |
 
@@ -90,6 +91,14 @@ Rows have `type: "calendar_day"`, `date`, `price`, `isCheapest`. `lergassy/fligh
       --json --user-agent lergassy-agent-skills/apify-flight-search 2>/dev/null
 
 Rows have `type: "destination"`, `destination`, `city`, `country`, `price`, `airline`, `stops`, `durationMinutes`.
+
+**Ryanair cheapest day per date** (run on 21 Nov 2026: 61 day rows in 2 s):
+
+    apify actors call "lergassy/ryanair-flights-scraper" \
+      -i '{"origin":"STN","destination":"DUB","departureDate":"2027-03-15","mode":"calendar","months":2,"currency":"EUR"}' \
+      --json --user-agent lergassy-agent-skills/apify-flight-search 2>/dev/null
+
+Rows have `type: "calendar_day"`, `date`, `price`, `currency`, `departAt`, `arriveAt`, `soldOut`, `bookingUrl`. Ryanair airports only.
 
 **KAYAK fares** (10 rows in 48 s):
 
